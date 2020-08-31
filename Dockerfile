@@ -28,6 +28,8 @@ RUN mkdir ~/.npm-global &&\
   npm install -g tslab &&\
   tslab install
 
+ADD ./notebook ${HOME}/tslab/notebook 
+
 # Notes:
 # 1. Do not use ENTRYPOINT because mybinder need to run a custom command.
 # 2. To use JupyterNotebook, replace "lab" with notebook".
