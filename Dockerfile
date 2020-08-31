@@ -19,7 +19,7 @@ ENV LC_CTYPE=C.UTF-8
 ENV HOME /home/node
 RUN id -u node | grep -c "^1000$"
 USER node
-WORKDIR ${HOME}
+WORKDIR ${HOME}/tslab
 
 # Install tslab
 ENV PATH $PATH:${HOME}/.npm-global/bin

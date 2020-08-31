@@ -3,10 +3,11 @@ version: "3"
 services:
   tslab:
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
     ports:
       - 8888:9999
     volumes:
+      - ./notebook:/home/node/tslab/notebook
       - ./jupyter_notebook_config.py:/home/node/.jupyter/jupyter_notebook_config.py
       - ./jupyter_notebook_config.json:/home/node/.jupyter/jupyter_notebook_config.json
